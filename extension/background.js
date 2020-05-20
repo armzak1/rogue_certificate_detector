@@ -10,10 +10,9 @@ let getCertUrl = async (urlTested, httpHeadMethod=false) => {
       console.log(securityInfo.certificates);
       let data = {url: urlTested, cert_fingerprint: securityInfo.certificates[0].fingerprint.sha1}
       checkCertRemote(data).then((res) => res.json()).then(body => {
-        console.log(body)
-        console.log(body['Result'])
+        console.log(body['Result']) //for debugging
         if(body['Result'] != 'OK'){
-          var cakeNotification = "cake-notification"
+          var mismatchNotification = "mismatch-notification"
           browser.notifications.create(cakeNotification, {
             "type": "basic",
             "iconUrl": "icons/379743.png",
@@ -55,8 +54,8 @@ let getCertUrl = async (urlTested, httpHeadMethod=false) => {
 let checkCertRemote = async (data) => {
   console.log("Sending Request with", data);
   return fetch("http://localhost:8080/check_certificate", {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        body: JSON.stringify(data) // body data type must match "Content-Type" header
+        method: 'POST', 
+        body: JSON.stringify(data)
   });
 }
 
