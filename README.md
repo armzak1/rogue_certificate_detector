@@ -7,5 +7,5 @@ How to run:
 3. Install all python dependencies as required
 4. In `central_validator.py` fix the distant validator URLs
 5. Type `python central_validator.py` to start it
-6. For each distant validator, start by typing `python central_validatorN.py` (if ran locally, fix the ports beforehand)
+6. For each distant validator, start by typing `python distant_validatorN.py` (if ran locally, fix the ports beforehand)
 7. In Firefox, inspect the extension in console to see the results. (In case of certificate mismatch you'll receive a notification)
