@@ -1,4 +1,4 @@
-# rogue_certificate_detector
+# Rogue Certificate Detector
 
 How to run:
 1. Use [this guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) to load the contents
